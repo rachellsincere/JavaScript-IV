@@ -13,19 +13,6 @@ class Person {
     }
 }
 
-//Person class examples
-const sammi = new Person ({
-    name: 'Sammi',
-    age: '23',
-    location: 'Santa Monica',
-    gender: 'F',
-})
-console.log(sammi.speak());
-console.log(sammi.gender);
-
-
-
-
 //Instructor Class
 class Instructor extends Person {
     constructor(instrAttr) {
@@ -40,23 +27,7 @@ class Instructor extends Person {
     grade(student,subject) {
         return `${student.name} receives a perfect score on ${subject}`;
     }
-
 }
-
-//Instructor Class example
-const lori = new Instructor({
-    name: 'Lori',
-    age: '35',
-    location: 'Anchorage',
-    gender: 'F',
-    specialty: 'Front-End',
-    favLanguage: 'Javascript',
-    catchPhrase: 'Cash rules everything around me'
-})
-console.log(lori.catchPhrase);
-console.log(lori.demo("Applied Js"));
-console.log(lori.grade(sammi, "Calculus"));
-
 
 //Student Class
 class Student extends Person {
@@ -79,23 +50,6 @@ class Student extends Person {
     }
 }
 
-//Student Class Example
-const jeremy = new Student({
-    name: 'Jeremy',
-    age: '63',
-    location: 'Florida',
-    gender: 'M',
-    previousBackground: 'accountant',
-    className: 'CS3401',
-    favSubjects: ['math', 'art', 'writing', 'music']
-})
-
-jeremy.listsSubjects();
-console.log(jeremy.age);
-console.log(jeremy.prAssignment('javascript2'));
-console.log(jeremy.sprintChallenge('javascript4'));
-
-
 //Project Manager Class
 class ProjectManager extends Instructor {
     constructor(pmAttr) {
@@ -111,6 +65,37 @@ class ProjectManager extends Instructor {
     }
 }
 
+
+//Person class example
+const sammi = new Person ({
+    name: 'Sammi',
+    age: '23',
+    location: 'Santa Monica',
+    gender: 'F',
+})
+
+//Instructor Class example
+const lori = new Instructor({
+    name: 'Lori',
+    age: '35',
+    location: 'Anchorage',
+    gender: 'F',
+    specialty: 'Front-End',
+    favLanguage: 'Javascript',
+    catchPhrase: 'Cash rules everything around me'
+})
+
+//Student Class Example
+const jeremy = new Student({
+    name: 'Jeremy',
+    age: '63',
+    location: 'Florida',
+    gender: 'M',
+    previousBackground: 'accountant',
+    className: 'CS3401',
+    favSubjects: ['math', 'art', 'writing', 'music']
+})
+
 //Project Manager Class example
 const lala = new ProjectManager({
 
@@ -125,8 +110,16 @@ const lala = new ProjectManager({
     favInstructor: 'Emily'
 })
 
+console.log(sammi.speak());
+console.log(sammi.gender);
+console.log(lori.catchPhrase);
+console.log(lori.demo("Applied Js"));
+console.log(lori.grade(sammi, "Calculus"));
+jeremy.listsSubjects();
+console.log(jeremy.age);
+console.log(jeremy.prAssignment('javascript2'));
+console.log(jeremy.sprintChallenge('javascript4'));
 console.log(lala.catchPhrase);
 console.log(lala.standUp('sprint03'));
 console.log(lala.debugsCode(jeremy, 'CSS'));
-
 

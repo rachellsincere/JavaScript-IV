@@ -16,6 +16,7 @@ Prototype Refactor
   * destroy() // prototype method that returns: `${this.name} was removed from the game.`
 */
 
+//
 class GameObject {
     constructor(gameAttributes) {
     this.createdAt = gameAttributes.createdAt;

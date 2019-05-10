@@ -58,6 +58,7 @@ console.log(lori.demo("Applied Js"));
 console.log(lori.grade(sammi, "Calculus"));
 
 
+//Student Class
 class Student extends Person {
     constructor(stuAttr) {
         super(stuAttr);
@@ -76,7 +77,7 @@ class Student extends Person {
     sprintChallenge(sprintSubject) {
         return `${this.name} has begun sprint challenge on ${sprintSubject}`;
     }
-}//Student Class
+}
 
 //Student Class Example
 const jeremy = new Student({
@@ -93,5 +94,39 @@ jeremy.listsSubjects();
 console.log(jeremy.age);
 console.log(jeremy.prAssignment('javascript2'));
 console.log(jeremy.sprintChallenge('javascript4'));
+
+
+//Project Manager Class
+class ProjectManager extends Instructor {
+    constructor(pmAttr) {
+        super(pmAttr);
+        this.gradClassName = pmAttr.gradClassName;
+        this.favInstructor = pmAttr.favInstructor;
+    }
+    standUp(slackChannel) {
+        return `${this.name} announces to ${slackChannel} @channel standy times!`;
+    }
+    debugsCode(student,subject) {
+        return `${this.name} debugs ${student.name}'s code on ${subject}`;
+    }
+}
+
+//Project Manager Class example
+const lala = new ProjectManager({
+
+    name: 'Lala',
+    age: '25',
+    location: 'New York',
+    gender: 'F',
+    specialty: 'Front-End',
+    favLanguage: 'C++',
+    catchPhrase: 'Badda no Bing',
+    gradClassName: 'WebPT6',
+    favInstructor: 'Emily'
+})
+
+console.log(lala.catchPhrase);
+console.log(lala.standUp('sprint03'));
+console.log(lala.debugsCode(jeremy, 'CSS'));
 
 

@@ -66,15 +66,23 @@ class ProjectManager extends Instructor {
 }
 
 
-//Person class example
+//Person Class object examples
 const sammi = new Person ({
     name: 'Sammi',
     age: '23',
     location: 'Santa Monica',
-    gender: 'F',
+    gender: 'F'
 })
 
-//Instructor Class example
+const jalen = new Person ({
+    name: 'Jalen',
+    age: '19',
+    location: 'Miami',
+    gender: 'M'
+})
+
+
+//Instructor Class object examples
 const lori = new Instructor({
     name: 'Lori',
     age: '35',
@@ -84,8 +92,17 @@ const lori = new Instructor({
     favLanguage: 'Javascript',
     catchPhrase: 'Cash rules everything around me'
 })
+const james = new Instructor({
+    name: 'James',
+    age: '56',
+    location: 'Atlanta',
+    gender: 'M',
+    specialty: 'React',
+    favLanguage: 'Java',
+    catchPhrase: 'After the rain comes the sun'
+})
 
-//Student Class Example
+//Student Class object examples
 const jeremy = new Student({
     name: 'Jeremy',
     age: '63',
@@ -96,7 +113,18 @@ const jeremy = new Student({
     favSubjects: ['math', 'art', 'writing', 'music']
 })
 
-//Project Manager Class example
+const theTank = new Student({
+    name: 'Gervonta',
+    age: '23',
+    location: 'Atlanta',
+    gender: 'M',
+    previousBackground: 'boxer',
+    className: 'CS101',
+    favSubjects: ['physical fitness', 'history', 'language', 'art']
+})
+
+
+//Project Manager Class object examples
 const lala = new ProjectManager({
 
     name: 'Lala',
@@ -110,16 +138,35 @@ const lala = new ProjectManager({
     favInstructor: 'Emily'
 })
 
+const tom = new ProjectManager({
+
+    name: 'Tom',
+    age: '42',
+    location: 'Palm Springs',
+    gender: 'M',
+    specialty: 'redux',
+    favLanguage: 'C#',
+    catchPhrase: "And that's the wayyyyyy the news goes!",
+    gradClassName: 'WebPT6',
+    favInstructor: 'Michael'
+})
+
+/* Test Logs
 console.log(sammi.speak());
 console.log(sammi.gender);
+console.log(jalen.location);
 console.log(lori.catchPhrase);
 console.log(lori.demo("Applied Js"));
 console.log(lori.grade(sammi, "Calculus"));
+console.log(james.specialty);
 jeremy.listsSubjects();
 console.log(jeremy.age);
 console.log(jeremy.prAssignment('javascript2'));
 console.log(jeremy.sprintChallenge('javascript4'));
+console.log(theTank.previousBackground);
 console.log(lala.catchPhrase);
 console.log(lala.standUp('sprint03'));
 console.log(lala.debugsCode(jeremy, 'CSS'));
+console.log(tom.catchPhrase);
+*/
 
